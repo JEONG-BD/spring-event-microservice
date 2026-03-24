@@ -1,0 +1,19 @@
+package io.cosmos.account.command;
+
+import io.cosmos.core.Command;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Deposit extends Command {
+    //
+    private transient String no;
+    private int amount;
+    //
+    private Optional<String> transferId = Optional.empty();
+}
