@@ -14,9 +14,8 @@ import java.util.Optional;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Withdraw extends Command {
-    //
+
     private String no;
     private int amount;
-    //
     private Optional<String> transferId = Optional.empty();
 }

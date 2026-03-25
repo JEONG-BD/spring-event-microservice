@@ -6,10 +6,14 @@ import io.cosmos.account.command.Deposit;
 import io.cosmos.account.command.Withdraw;
 import io.cosmos.account.query.QueryAccount;
 import io.cosmos.account.service.AccountService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/account")
+@Slf4j
 public class AccountEndpoint {
 
     private final AccountService accountService;

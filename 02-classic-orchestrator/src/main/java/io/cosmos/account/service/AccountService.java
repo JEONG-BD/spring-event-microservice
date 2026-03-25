@@ -57,14 +57,14 @@ public class AccountService {
     }
 
     public void withdraw(Withdraw command) {
-        //
-        Account account = this.accountStore.retrieve(command.getNo());
 
+        Account account = this.accountStore.retrieve(command.getNo());
         try {
             account.withdraw(command);
             this.accountStore.update(account);
 
             if (command.getTransferId().isPresent()) {
+
                 this.gateway.publish(new Withdrawed(command.getNo(),
                         command.getAmount(),
                         command.getTransferId()));

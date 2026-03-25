@@ -17,5 +17,6 @@ public class Gateway {
 
     public void publish(Event event){
         System.out.println("publish Event : [ " + event + "]") ;
+        this.eventPublisher.publishEvent(event);
     }
 }
