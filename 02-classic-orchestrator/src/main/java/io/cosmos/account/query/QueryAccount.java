@@ -1,7 +1,14 @@
 package io.cosmos.account.query;
 
-public class QueryAccount {
-    public QueryAccount(String no) {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-    }
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class QueryAccount {
+    private String no;
 }

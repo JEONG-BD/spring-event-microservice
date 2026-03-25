@@ -12,7 +12,7 @@ import java.util.Optional;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Deposited extends Event {
+public class Withdrawed extends Event {
     private String accountNo;
     private int amount;
     private Optional<String> transferId;

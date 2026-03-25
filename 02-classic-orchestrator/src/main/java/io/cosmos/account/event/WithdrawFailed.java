@@ -1,6 +1,10 @@
 package io.cosmos.account.event;
 
 import io.cosmos.core.Event;
+
+import java.util.Optional;
+
+import io.cosmos.core.Event;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,8 +16,7 @@ import java.util.Optional;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Deposited extends Event {
-    private String accountNo;
-    private int amount;
+public class WithdrawFailed extends Event {
+    //
     private Optional<String> transferId;
 }
