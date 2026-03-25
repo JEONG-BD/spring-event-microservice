@@ -1,0 +1,8 @@
+PUT http://localhost:8080/account/85fc1062
+Content-Type: application/json
+command: Withdraw
+
+{
+  "amount": 1,
+  "transferId": "85fc1062"
+}
