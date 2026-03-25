@@ -1,0 +1,27 @@
+package io.cosmos.transfer.endpoint;
+
+import io.cosmos.transfer.aggregate.Transfer;
+import io.cosmos.transfer.command.TransferMoney;
+import io.cosmos.transfer.query.QueryTransfer;
+import io.cosmos.transfer.service.TransferService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/transfer")
+@RequiredArgsConstructor
+public class TransferEndpoint {
+    private final TransferService transferService;
+
+    @PostMapping
+    public String transfer(@RequestBody TransferMoney command) {
+        return this.transferService.transfer(command);
+    }
+
+    @GetMapping(value = "/{transferId}")
+    public Transfer queryTransfer(@PathVariable String transferId) {
+
+        QueryTransfer query = new QueryTransfer(transferId);
+        return this.transferService.query(query);
+    }
+}
